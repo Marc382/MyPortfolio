@@ -1,0 +1,321 @@
+/* STYLE.CSS */
+
+@media screen and (max-width:767px) {
+  
+}
+@media screen and (min-width:767px) and (max-width:1023px) {
+  
+}
+@media screen and (min-width:1024px) {
+  
+}
+
+
+
+body {
+    background: url("graybg.jpg") center center no-repeat;
+    background-size: cover;
+
+}
+
+
+  
+  /* HEADER TAGS */
+  
+  h1, h2 {
+    font-weight: 700 !important;
+    color: gray;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+  }
+  
+  /* HYPERLINKS */
+  
+  a {
+    color: gray;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  a:hover {
+    color: #000000 !important;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  /* SPAN */
+  
+  span {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    /* padding and font size reduced in max-width: 600px media query in grid.css */
+  }
+  
+  
+  .nav {
+    background-color: #ffffff;
+    text-align: right;
+    /* text align: center in max-width: 600px media query in grid.css */
+    text-transform: uppercase;
+  }
+  
+  .jumbotron {
+    background-image: url("moving.gif") !important;
+     background-size: cover; 
+   
+    background-attachment: fixed;
+    opacity: 0.9;
+    /* margin-top: -20px; */
+  }
+  
+  .nav, .portfolio, .footer {
+    background-color: #eeeeee;
+  }
+  
+  
+  
+  
+  /* JUMBOTRON */
+  
+  
+  /* .jumbotron-content {
+  tex0a
+    justify-content: center;
+    height: 100vh;
+  } */
+  
+  .title {
+    background-color: gray;
+    color: white;
+    font-size: 4.5rem;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* TEXT */
+  .centered {
+    text-align: center;
+  }
+  
+  input, textarea {
+    font-size: 0.8rem;
+    /* width and padding under media queries in grid.css */
+  }
+  
+  /* TITLE  */
+  /* .title {
+    justify-self: center;
+  } */
+  
+  
+  /* IMAGES */
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  
+  
+  /* BUTTON */
+  .btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    /* text-shadow: 1px 1px 3px #666666; */
+    /* -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666; */
+    color: #ffffff;
+    background-color: gray;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.1rem;
+    /* font-size: 0.9em in max-width:600px media query in grid.css */
+  }
+  
+  .btn:hover {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  /* FORM */
+  input[type=text], input[type=email], textarea {
+    box-sizing: border-box;
+    border: 2px solid #e0e0e0;
+    /*width and padding in media queries in grid.css */
+  
+  }
+  
+  
+  /* CURSOR */
+  .pointer-cursor {
+    cursor: pointer;
+  }
+  
+  
+  .container {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+  }
+  
+  .nav {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+  
+  
+  
+  
+  .about-content {
+    padding-bottom: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  .about-avatar {
+    grid-area: aa;
+    padding-right: 2vw;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    filter:drop-shadow(8px 8px 4px gray);
+  }
+  .about-text {
+    grid-area: at;
+  }
+  
+
+  
+  .horizontal-line {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  
+  /* MIN WIDTH - 1200PX */
+  @media (min-width: 1200px) {
+  
+    .about-content {
+      display: grid;
+      grid-template-areas:
+      "aa aa at at at at";
+    }
+    .portfolio-content {
+      display: grid;
+      grid-template-areas:
+      "a a b b c c"
+      "d d e e f f";
+    }
+  
+    input[type=text], input[type=email], textarea {
+      width: 60%;
+      padding: 1% 2%;
+      margin: 0.5% 0;
+    }
+    .jumbotron {
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
+    .img-av {
+      max-width: 250px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  
+  
+  /* MIN WIDTH - 106PX AND MAX WIDTH - 1999PX */
+  @media (max-width: 1199px) {
+  
+    .about-content {
+      display: grid;
+      grid-template-areas:
+      "aa aa aa"
+      "at at at";
+    }
+    .portfolio-content {
+      display: grid;
+      grid-template-areas:
+      "a a b b"
+      "c c d d"
+      "e e f f";
+    }
+    input[type=text], input[type=email], textarea {
+      width: 70%;
+      padding: 2% 2%;
+    }
+    .jumbotron {
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
+  
+    .img-av {
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  
+  
+  
+  /* MAX WIDTH - 600PX */
+  @media (max-width: 600px) {
+  
+    .about-content {
+      display: grid;
+      grid-template-areas:
+      "aa aa aa"
+      "at at at";
+    }
+    .portfolio-content {
+      display: grid;
+      grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+    }
+    .jumbotron {
+      padding-bottom: 25vh;
+    }
+    input[type=text], input[type=email], textarea {
+      width: 80%;
+      padding: 3% 2%;
+    }
+    .btn {
+      font-size: 0.9rem;
+    }
+  
+    .jumbotron {
+      padding-top: 15vh;
+      padding-bottom: 15vh;
+    }
+    .nav {
+      text-align: center;
+    }
+    .img-av {
+      max-width: 170px;
+      height: auto;
+      border-radius: 50%;
+    }
+    span {
+      padding-left: 1vw;
+      padding-right: 1vw;
+      font-size: 0.9rem;
+    }
+  }
+  
